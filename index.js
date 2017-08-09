@@ -4,13 +4,13 @@ var rp = require('request-promise');
 module.exports = {
     send: async (endpoint, data) => {
         let postData = {
-            app_id: data.app_id,
+            client_id: data.client_id,
             rec: data.rec,
             prefix: data.prefix,
             template: data.template,
             params: data.params
         };
-        let sign = utils.encrypt(postData, data.app_key);
+        let sign = utils.encrypt(postData, data.client_key);
 
         postData.sign = sign;
 

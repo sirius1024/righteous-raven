@@ -1,13 +1,14 @@
 let rr = require('../index');
 
 rr.send('http://localhost:3333', {
-    app_id: '你的app_id',
+    client_id: '你的client_id',
     rec: '接受者手机号',
     prefix: 'sign name',
     template: 'SMS_XXXXXXX',
     params: { username: 'sirius' },
-    app_key: '你的app_key'
+    client_key: '你的client_key'
 }).then(console.log, console.error)
+
 
 
 /*

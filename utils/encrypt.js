@@ -10,7 +10,7 @@ module.exports = {
         let encryStr = '';
         //顺序排列
         keys.forEach(k => {
-            if (k != 'sign' && k != 'app_key') {
+            if (k != 'sign' && k != 'client_key') {
                 let v = data[k];
                 if (typeof (v) !== 'string') {
                     v = JSON.stringify(v);
