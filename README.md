@@ -20,7 +20,7 @@ rr.send('your rr-site endpoint', {
 })
 ```
 
-result
+result
 
 ```js
 { router: '/sms/send',
