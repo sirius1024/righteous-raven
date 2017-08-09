@@ -16,7 +16,7 @@ rr.send('your rr-site endpoint', {
     prefix: 'sign name', // e.g. 爱健康
     template: 'SMS_XXXXXXX', // e.g. SMS_10010010
     params: 'your params for template', // e.g. { username: 'sirius' }
-    app_key: 'your app_key' // e.g. ask sirius<cealer@foxmail.com>Ï
+    app_key: 'your app_key' // e.g. ask sirius<cealer@foxmail.com>
 })
 ```
 
