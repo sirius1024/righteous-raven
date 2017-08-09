@@ -1,0 +1,23 @@
+{
+    "name": "righteous-raven",
+    "version": "1.0.0",
+    "description": "If you has connection with righteous-raven, you should use it.",
+    "main": "index.js",
+    "scripts": {
+        "test": "node test/send"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/sirius1024/righteous-raven.git"
+    },
+    "author": "sirius <cealer@foxmail.com>",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/sirius1024/righteous-raven/issues"
+    },
+    "homepage": "https://github.com/sirius1024/righteous-raven#readme",
+    "dependencies": {
+        "request": "^2.81.0",
+        "request-promise": "^4.2.1"
+    }
+}
