@@ -13,8 +13,8 @@ var rr = require('righteous-raven');
 rr.send('your rr-site endpoint', {
     app_id: 'your rr app_id', // ask sirius<cealer@foxmail.com>
     rec: 'reciver phone number', // e.g. 13800138000
-    prefix: 'sign name', // e.g. 爱健康
-    template: 'SMS_XXXXXXX', // e.g. SMS_10010010
+    prefix: 'sign name', // e.g. 爱健康
+    template: 'SMS_XXXXXXX', // e.g. SMS_10010010
     params: 'your params for template', // e.g. { username: 'sirius' }
     app_key: 'your app_key' // e.g. ask sirius<cealer@foxmail.com>Ï
 })
