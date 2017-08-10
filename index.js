@@ -38,5 +38,20 @@ module.exports = {
         }
         let rst = await rp(options);
         return rst;
+    },
+    verify: async (endpoint, data) => {
+        let postData = data;
+        let sign = utils.encrypt(postData, data.client_key);
+
+        postData.sign = sign;
+        delete postData.client_key;
+        let options = {
+            method: 'POST',
+            uri: `${endpoint}/sms/verify`,
+            body: postData,
+            json: true
+        }
+        let rst = await rp(options);
+        return rst;
     }
 }

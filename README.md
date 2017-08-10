@@ -38,7 +38,7 @@ result
 
 ```js
 var rr = require('righteous-raven');
-rr.send('your rr-site endpoint', {
+rr.code('your rr-site endpoint', {
     client_id: 'your rr client_id', // ask sirius<cealer@foxmail.com>
     code_type: 'NUMBER' //Optional section, NUMBER | CHARACTER | CHARACTER-UPPER | CHARACTER-LOWER | HYBRID, default to 'NUMBER' only',
     code_length: 4, //verification code length, default to 4.
@@ -66,3 +66,48 @@ result
     time: '2017-08-10 11:15:05'
 }
 ```
+
+## Verify the code
+
+```js
+var rr = require('righteous-raven');
+rr.verify('http://localhost:3333', {
+    client_id: 'you client_id',
+    req_key: 'your key of request verify code',
+    code: 'user input the code',
+    client_key: 'your client key'
+}).then(console.log, console.error);
+```
+
+success result:
+
+```js
+{
+    text: '/sms/verify',
+    data: {
+        result: 'success',
+        message: 'OK',
+        code: '4370',
+        reqKey: 'rkZTy8KwW'
+    },
+    time: '2017-08-10 14:24:42'
+}
+```
+
+failure result:
+
+```js
+{
+    text: '/sms/verify',
+    data: {
+        result: 'failure',
+        message: 'EXPIRED',
+        code: '4370',
+        reqKey: 'rkZTy8KwW'
+    },
+    time: '2017-08-10 14:21:24'
+}
+```
+
+## NOTE
+If you verify the code and get 'success', next time you verify the same code and reqKey, you'll get 'CONSUMED' message to know this code has been consumed once.
