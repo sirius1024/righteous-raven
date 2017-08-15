@@ -2,7 +2,7 @@ let rr = require('../index');
 
 rr.verify('http://localhost:3333', {
     client_id: 'you client_id',
-    req_key: 'your key of request verify code',
+    rec: 'your key of request verify code',
     code: 'user input the code',
     client_key: 'your client key'
 }).then(console.log, console.error);
