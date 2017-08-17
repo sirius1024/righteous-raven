@@ -2,7 +2,7 @@ const utils = require('./utils/encrypt');
 var rp = require('request-promise');
 
 module.exports = {
-    send: async (endpoint, data) => {
+    send: async function (endpoint, data) {
         let postData = {
             client_id: data.client_id,
             rec: data.rec,
@@ -24,7 +24,7 @@ module.exports = {
         let rst = await rp(options);
         return rst;
     },
-    code: async (endpoint, data) => {
+    code: async function (endpoint, data) {
         let postData = data;
         let sign = utils.encrypt(postData, data.client_key);
 
@@ -39,7 +39,7 @@ module.exports = {
         let rst = await rp(options);
         return rst;
     },
-    verify: async (endpoint, data) => {
+    verify: async function (endpoint, data) {
         let postData = data;
         let sign = utils.encrypt(postData, data.client_key);
 

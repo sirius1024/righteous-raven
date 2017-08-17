@@ -1,6 +1,6 @@
 {
     "name": "righteous-raven",
-    "version": "1.0.4",
+    "version": "1.0.5",
     "description": "If you has connection with righteous-raven, you should use it.",
     "main": "index.js",
     "scripts": {
