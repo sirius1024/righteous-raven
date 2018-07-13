@@ -40,7 +40,7 @@ result
 var rr = require('righteous-raven');
 rr.code('your rr-site endpoint', {
     client_id: 'your rr client_id', // ask sirius<cealer@foxmail.com>
-    code_type: 'NUMBER' //Optional section, NUMBER | CHARACTER | CHARACTER-UPPER | CHARACTER-LOWER | HYBRID, default to 'NUMBER' only',
+    code_type: 'NUMBER', //Optional section, NUMBER | CHARACTER | CHARACTER-UPPER | CHARACTER-LOWER | HYBRID, default to 'NUMBER' only',
     code_length: 4, //verification code length, default to 4.
     rec: 'reciver phone number', // e.g. 13800138000
     prefix: 'sign name', // e.g. 爱健康
